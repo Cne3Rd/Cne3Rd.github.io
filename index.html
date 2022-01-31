@@ -1,0 +1,575 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>n3eRrd</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  
+  
+  
+  <style>
+      
+      
+      
+      /* Code By n3eRrd*/
+
+body {
+    font-size: 15pt;
+    background-color: #42445A;
+    margin: 0;
+    height: 200px;
+}
+
+
+#navbar {
+  background-color: #5F738245;
+  height: 100px;
+  margin: 0;
+  
+}
+
+
+h1 {
+  display: inline;
+  position: relative;
+  left: 10px;
+  top: 27px;
+}
+
+
+
+#container {
+  float: right;
+  height: 50px;
+  width: 50px;
+  margin-right: 6px;
+  margin-top: 20px;
+  background-color: #4F59616B;
+  background-color: #5F738245;
+  border: none;
+  outline:none;
+  padding: 10px;
+  border-radius: 5px;
+  
+}
+
+
+#nav {
+  float: right;
+  animation-name: navbar;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; 
+  position: relative;
+  margin-right: 30px;
+  padding-top:0;
+}
+
+#nav ul li {
+  list-style: none;
+  height: 3px;
+  width: 30px;
+  background-color: black;
+  
+}
+
+
+
+.l1 {
+  position: absolute;
+  text-align: center;
+  top: 1px;
+ 
+}
+
+.l2{
+  position: absolute;
+  top: 7px;
+ 
+}
+
+
+.l3{
+  position: absolute;
+  top: 13px;
+}
+
+
+#submenu ul{
+  list-style: none;
+}
+
+#submenu {
+  background-color: #474F6F75;
+  width: 300px;
+  height:400px;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  margin: 0px;
+  border-radius: 5px;
+}
+
+#submenu li{
+  position: relative;
+  top: 100px;
+  padding: 20px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#submenu ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+#submenu li a:active {
+  background-color: #6D7FA547;
+  color: #fff;
+  font-size: 30px;
+}
+
+.bmc {
+  z-index: 1;
+  position: relative;
+}
+
+
+#contain {
+  text-align: center;
+}
+
+
+#head h2 {
+  position: relative;
+  height: 100px;
+  line-height: 1.4;
+  font-size: 15px;
+  font-family: 'Courier New', Courier, monospace;
+  animation-name: movedown;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+
+}
+
+
+@keyframes movedown {
+  0% {top: -1000px;}
+  100% {top: 10px;}
+}
+
+#ct p {
+  position: relative;
+  animation-name: moveleft;
+  animation-duration: 2s; 
+  animation-fill-mode: forwards;
+  padding: 15px;
+  opacity: 0.5;
+  color: #64CEA3;
+  color: white;
+  
+  
+}
+
+#ct p b {
+  color: #64CEA3;
+}
+
+
+@keyframes moveleft {
+  0% {left: -2000px; top: 0px;}
+  100% {left: 0px; top:10px;}
+}
+
+
+#ct p #lvr {
+  display: inline;
+  animation-name: lover;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+ 
+}
+
+
+@keyframes lover {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+  
+}
+
+
+
+#btn a {
+  display: inline-block;
+  opacity: 0;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 10px;
+  color:black;
+  animation-name: btn;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  
+}
+
+@keyframes btn {
+  0% {opacity: 0; border:1px solid #fff;}
+  100% {opacity: 1;border:1px solid #000;}
+}
+
+#btn {
+  transition-property: all;
+  transition-duration: 3s;
+}
+
+#btn:hover {
+  transform: rotateY(360deg)
+}
+
+#box {
+  text-align: center;
+  font-size: 20px;
+  position: absolute;
+  text-indent: 120px;
+  font-family: 'Courier New', Courier, monospace;
+ 
+}
+
+
+#g1 {
+  color: dodgerblue; 
+  position: absolute;
+  left: 4px;  
+}
+
+#g2 {
+  color: orangered;
+  position: absolute;
+  left: 22px;
+}
+
+#g3{
+  color: #E4BA26; 
+  position:absolute;
+  left:40px;
+  
+}
+
+#g4 {
+  color:dodgerblue;
+  position: absolute;
+  left: 58px;
+}
+
+#g5 {
+  color: seagreen;
+  position: absolute;
+  left:77px;
+}
+
+#g6 {
+  color: orangered;
+  position: absolute;
+  left:95px;
+}
+
+#sc {
+  color: #1A18189C;
+  text-align: center;
+  height: 100px;
+  z-index: 0;
+}
+
+
+footer {
+  text-align: center;
+}
+
+#contact {
+  background-color: #161A2875;
+  height: 300px;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+p {
+  font-family: 'Caveat', cursive;
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Roboto Mono', monospace;
+}
+
+h3 {
+  font-family: 'Caveat', cursive;
+  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Roboto Mono', monospace;
+  position: relative;
+  border: 1px dashed darkgrey;
+  padding: 20px;
+
+}
+
+h1 {
+  font-family: 'Bangers', cursive;
+font-family: 'Caveat', cursive;
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Bangers', cursive;
+font-family: 'Caveat', cursive;
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Bangers', cursive;
+font-family: 'Caveat', cursive;
+}
+
+marquee {
+  font-weight: bolder;
+  font-family: 'Bangers', cursive;
+font-family: 'Caveat', cursive;
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Roboto Mono', monospace;
+
+}
+
+
+#contact {
+  text-align: center;
+
+}
+
+#ict {
+  position: relative;
+}
+
+
+#github {
+  display: inline-block;
+
+}
+
+#twitter {
+  display: inline-block;
+  
+  
+}
+
+#mail {
+  display: inline-block;
+
+}
+
+#nct{
+  text-align: center;
+  font-family: 'Bangers', cursive;
+  font-family: 'Caveat', cursive;
+  
+}
+
+      
+      
+  </style>
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com"<link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Cormorant+Garamond:wght@300&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Caveat&family=Cormorant+Garamond:wght@300&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+  
+  
+  
+</head>
+
+<!-- SOURCE -->
+
+<body>
+  <div id="navbar">
+    <h1 id="gbhome"> n3eRrd </h1>
+    
+    <button id="container" onclick="toggleNav()">
+      <div id="nav">
+        <ul>
+          <li class="l1"></li>
+          <li class="l2"></li>
+          <li class="l3"></li>
+        </ul>
+      </div>
+    </button>
+      <div id="submenu">
+        
+        <ul>
+          <li><a href="https://n33ds0n.github.io" id="hme" target="_blank">Hire Me</a></li>
+          <li><a href="https://pastebin.com/G3eRfuzR" class="bmc" target="__blank">Buy Me Cofee</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="https://tiktok.com" target="_blank">Fun</a></li>
+        </ul>
+        
+        
+        
+      </div>
+      
+  </div>
+ 
+ <div>
+ 
+ <br><br><br>
+  
+  <marquee direction="down" id="sc" scrollamount="5"> Anything Computer<br><br>Anything Computer<br><br>Anything Computer<br><br>Anything Computer<br><br>Anything Computer</marquee><div></div><div></div>
+ <br><br><br> 
+ <div id="img1">
+  <img src="https://lh3.googleusercontent.com/d/1-NJulGzliF-_-rPeOYFr-3f0dxS4jRbR=s220?authuser=0" alt="deleter" width="150px" height="150px" style="text-align:center; margin-left:105px; border-radius:50%;">
+ </div>
+ 
+   <div id="contain">
+    <div id="head">
+      <h2> Mukaila Samsondeen </h2>
+    </div>
+    
+    <div id="ct">
+      
+      <h3> About Me </h3>
+      
+      <p>
+        Hello, World! My name Is <b>Samsondeen</b>, I am  <b>Programmer</b>, I tell <b>computer</b> what to do by giving it instructions, I feed <b>Computer</b> with data and instructions of what to do with the data, I love playing With <b>Anything Computer</b>, because it makes me <b>think different</b>. I'm a <b>Programmer</b> by day and a <b>Security Researcher</b> by Night, I love <b>Hunting</b> for Computer <b>Security</b> Flaws(Bug Hunting). I Love Breaking Things, Building Things That Break Things and writing <b>Hacking</b> script. I Love Solving Technical <b>Problems</b>, Writing Beautiful <b>Algorithm</b>, Helping People With their Technical Problem and I also write about <b>Programming</b> And <b>Computer Security</b> sometimes. By the way You can call me <b>n3eRrd</b>. I'm n3eRrd and I am From <b>Nigeria</b>. Thank You<span id="lvr">🖤</span>
+      </p>
+      
+    </div>
+    <br>
+    
+    <div id="btn">
+      <a href="https://dev.to/n01zzzzz" target="_blank"> I Blog </a>
+    </div>
+    
+  </div>
+  
+  <br><br><br><br><br><br>
+ 
+   <h2 id="nct"> Contact </h2>
+    
+  
+  <div id="contact">
+    
+    <div id="ict"
+      <div id="github">
+        <a href="https://github.com/n3eRrd"> <img src="https://img.icons8.com/bubbles/100/ffffff/github.png"/></a>
+      </div>  
+  
+      <div id="twitter">
+        <a href="https://twitter.com/n3eRrd" target=_blank>  <img src="https://img.icons8.com/bubbles/100/000000/twitter.png"/></a>
+      </div>
+      <br>
+      
+      <div id="mail">
+       <a href="mailto:n3eRrd@gmail.com" target="_blank"><img src="https://img.icons8.com/bubbles/100/ffffff/email-male.png"></a><br>
+      </div>
+    </div>
+    
+  </div>
+  
+  
+  
+  
+  <div id="box">
+    
+    <h2>  <span id="g1">N</span>  <span id="g2">0</span>  <span id="g3">1</span>  <span id="g4">z</span>  <span id="g5">z</span>  <span id="g6">z</span>     </h2>
+  </div>
+  
+  
+
+  
+  
+  
+  
+  
+  <!-- Code By N01zzz -->
+  
+  
+  
+  
+  
+  
+  <script>
+      
+      
+      
+/* Code By N01zzz */
+
+
+
+navbool = false 
+
+
+function move(){
+  
+  var l1 = document.getElementsByClassName("l1");
+  var l2 = document.getElementsByClassName("l2");
+  var l3 = document.getElementsByClassName("l3");
+  var sm = document.getElementById("submenu")
+  
+  l1[0].style.width = "30px";
+  l1[0].style.top = "10px" ;
+  l1[0].style.transitionProperty = "all";
+  l1[0].style.transitionDuration = "0.1s";
+  l1[0].style.transform = "rotate(-45deg)";
+  
+  l2[0].style.width = "30px";
+  l2[0].style.top = "10px";
+  l2[0].style.transitionProperty = "all";
+  l2[0].style.transitionDuration = "0.1s";
+  l2[0].style.transform = "rotate(45deg)";
+  
+  l3[0].style.opacity = "0"
+  
+  
+  
+  sm.style.opacity = 1
+  
+  navbool = true;
+  
+  
+}
+
+function boom() {
+  
+  var l1 = document.getElementsByClassName("l1");
+  var l2 = document.getElementsByClassName("l2");
+  var l3 = document.getElementsByClassName("l3");
+  var sm = document.getElementById("submenu")
+  
+   l1[0].style.width = "30px";
+   l1[0].style.top = "1px";
+   l1[0].style.transitionProperty = "all";
+   l1[0].style.transitionDuration = "0.1s";
+   l1[0].style.transform = "rotate(-180deg)";
+  
+   l2[0].style.width = "30px";
+   l2[0].style.top = "7px";
+   l2[0].style.transitionProperty = "all";
+   l2[0].style.transitionDuration = "0.1s";
+   l2[0].style.transform = "rotate(180deg)";
+  
+   l3[0].style.opacity = "1"
+   l3[0].style.top = "13px";
+   
+   sm.style.opacity = 0
+   
+   navbool = false
+  
+}
+
+function toggleNav() {
+  navbool ? boom() : move();
+}
+  </script>
+</body>
+</html>
